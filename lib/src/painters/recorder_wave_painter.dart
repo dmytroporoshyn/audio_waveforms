@@ -90,7 +90,7 @@ class RecorderWavePainter extends CustomPainter {
           ..color = middleLineColor
           ..strokeWidth = middleLineThickness,
         _durationLinePaint = Paint()
-          ..strokeWidth = 3
+          ..strokeWidth = 1
           ..color = durationLinesColor;
   var _labelPadding = 0.0;
 
@@ -148,6 +148,7 @@ class RecorderWavePainter extends CustomPainter {
         final textPainter = TextPainter(
           text: textSpan,
           textDirection: TextDirection.ltr,
+          textAlign: TextAlign.center
         );
 
         textPainter.layout(minWidth: 0, maxWidth: size.width);
@@ -172,10 +173,10 @@ class RecorderWavePainter extends CustomPainter {
             ? Duration(seconds: i).toHHMMSS()
             : Duration(seconds: i).inSeconds.toMMSS(),
         offset: Offset(
-            _labelPadding +
+            (_labelPadding +
                 dragOffset.dx -
                 totalBackDistance.dx -
-                durationTextPadding,
+                durationTextPadding - 16),
             size.height + labelSpacing),
       ),
     );
