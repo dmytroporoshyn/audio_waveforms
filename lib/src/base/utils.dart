@@ -87,7 +87,8 @@ enum IosEncoder {
   kAudioFormatAMR_WB,
   kAudioFormatLinearPCM,
   kAudioFormatAppleLossless,
-  kAudioFormatMPEG4AAC_HE_V2
+  kAudioFormatMPEG4AAC_HE_V2,
+  kAudioFormatFLAC
 }
 
 /// States of audio player

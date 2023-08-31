@@ -30,6 +30,7 @@ struct Constants {
     static let kAudioFormatLinearPCM = 10
     static let kAudioFormatAppleLossless = 11
     static let kAudioFormatMPEG4AAC_HE_V2 = 12
+    static let kAudioFormatFLAC = 13
 
     static let readAudioFile = "readAudioFile"
     static let durationEventChannel = "durationEventChannel"
